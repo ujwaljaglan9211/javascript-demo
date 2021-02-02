@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 18</title>   
+  </head>
+  <body>
+    <script>
+      var number = 3500;
+      alert('3500 in Indian currency will be - ' + new Intl.NumberFormat('en-IN' ,{ style: 'currency', currency: 'INR', maximumSignificantDigits: 3 }).format(number));
+    </script>
+  </body>
+</html>

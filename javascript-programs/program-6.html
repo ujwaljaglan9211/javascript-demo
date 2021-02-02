@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 6</title>   
+  </head>
+  <body>
+    <script>
+      function isInt(n){
+        if(Number(n) === n && n % 1 === 0){
+          return 'an integer';
+        }else{
+          return 'not an integer';
+        }
+      }
+      function isFloat(n){      
+        if(Number(n) === n && n % 1 !== 0){
+          return 'is float';
+        }else{
+          return 'is not float';
+        }
+      }
+      alert('5 is '+ isInt(5));
+      alert('5.2 is '+ isFloat(5.2));
+    </script>
+  </body>
+</html>

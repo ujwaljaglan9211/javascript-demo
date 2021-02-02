@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 16</title>   
+  </head>
+  <body>
+    <script>
+      var array1 = ["Vijendra","Singh","Singh", "Shakya"];
+      alert('duplicated array1 - ' + array1);
+      array2 = array1.filter((item,index)=>{
+        return (array1.indexOf(item) == index)
+      });
+      alert('array2 - ' + array2);
+    </script>
+  </body>
+</html>

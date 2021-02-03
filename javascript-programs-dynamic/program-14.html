@@ -5,13 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Javascript: Program 14</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 14 -Program to empty an array & the array is 1,2,5,10,1000,-1,20,{"a":10,"b":11}</h2>
+            <button onclick="myFunction()" class="btn btn-primary">Empty array</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
-      var arr1 = ['a','b','c','d','e','f'];
-      alert('current array is - ' + arr1);
-      arr1.splice(0,arr1.length);
-      alert('updated array after removing all elemnts is - ' + arr1);
+      function myFunction(){
+        var arr = [1,2,5,10,1000,-1,20,{"a":10,"b":11}];
+        arr.splice(0,arr.length);
+        document.getElementById("val").innerHTML = 'array is empty now';
+      }
     </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>

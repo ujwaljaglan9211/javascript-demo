@@ -4,25 +4,44 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 12</title>  
+    <title>Javascript: Program 12</title> 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 12 -Program to append an object in an array & the array is 1,2,5,10,1000,-1,20 & object is {"a":10,"b":11}</h2>
+            <button onclick="myFunction()" class="btn btn-primary">Append</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
+      // original array
+      let array = [1,2,5,10,1000,-1,20];
+      // object to add
+      let object = {"a":10,"b":11};
       function insertObject(arr, obj) {
         // find the last index
         let index = arr.length;
         // appending object to end of array
         arr.splice(index, 0, JSON.stringify(object));   
-        alert('updated array is - ' + array);
+        document.getElementById("val").innerHTML = ' object has been appended to the array & the updated array is ' + arr;
       }
-      // original array
-      let array = [1, 2, 3];
-      alert('original array is - ' + array);
-      // object to add
-      let object = {x: 12, y: 8};
-      alert('object to add in array is - ' + JSON.stringify(object));
-      // call the function
-      insertObject(array, object);
+      function myFunction(){
+        // call the function
+        insertObject(array, object);
+      }
     </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>

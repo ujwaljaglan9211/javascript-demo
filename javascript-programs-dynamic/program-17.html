@@ -4,20 +4,39 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 17</title>  
+    <title>Javascript: Program 17</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 16 -Program to merge two arrays and remove duplicates & the array1 is 1,2,5,1,10,2,1000,-1,20,{"a":10,"b":11} and the array2 is ram,shyam,1,1000</h2>
+            <button onclick="myFunction()" class="btn btn-primary">Remove duplicates from an array</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
-      var array1 = ["Vijendra","Singh"];
-      var array2 = ["Singh", "Shakya"];
-      alert('array1 - ' + array1);
-      alert('array2 - ' + array2);
-      // Merges both arrays and gets unique items
-      var array3 = array1.concat(array2);
-      array3 = array3.filter((item,index)=>{
-        return (array3.indexOf(item) == index)
-      });
-      alert('array3 - ' + array3);
+      function myFunction(){
+        var array1 = [1,2,5,1,10,2,1000,-1,20,JSON.stringify({"a":10,"b":11})];
+        var array2 = ['ram','shyam',1,1000];
+        // Merges both arrays and gets unique items
+        var array3 = array1.concat(array2);
+        array3 = array3.filter((item,index)=>{
+          return (array3.indexOf(item) == index)
+        });
+        document.getElementById("val").innerHTML = ' both arrays are merged with removed duplicates & the updated array is ' + array3;
+      }
     </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>

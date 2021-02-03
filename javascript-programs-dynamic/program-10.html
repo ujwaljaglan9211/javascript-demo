@@ -4,17 +4,42 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 10</title>   
+    <title>Javascript: Program 10</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 10 -Program to check if an array contains a specified value & the array is 1,2,5,10,1000,-1,20</h2>
+            <label for="name">
+              <input type="number" name="name" value="" placeholder="Enter value"/>
+              <span class="name-error"></span>
+            </label>
+            <button onclick="myFunction()" class="btn btn-primary">Convert to numbers</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
-      var a = ['a', 'b', 'z', '2', '1', '-1','hello'];
-      var index = a.indexOf('-1');
-      if (index !== -1) {        
-        alert('-1 exist in this array & the array items are - ' + a);
-      }else{
-        alert('-1 does not exist in this array & the array items are - ' + a);
+      function myFunction(){
+        var a = [1,2,5,10,1000,-1,20];
+        var check = document.getElementsByName("name")[0].valueAsNumber;
+        var index = a.indexOf(check);
+        if (index !== -1) {
+          document.getElementById("val").innerHTML = check + ' is present in the array';
+        }else{
+          document.getElementById("val").innerHTML = check + ' is not present in the array.';
+        }
       }
     </script>
-  </body>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
 </html>

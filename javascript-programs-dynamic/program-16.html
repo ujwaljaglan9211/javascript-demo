@@ -4,16 +4,36 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 16</title>   
+    <title>Javascript: Program 16</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 16 -Program to remove duplicates from an array & the array is 1,2,5,1,10,2,1000,-1,20,{"a":10,"b":11}</h2>
+            <button onclick="myFunction()" class="btn btn-primary">Remove duplicates from an array</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
-      var array1 = ["Vijendra","Singh","Singh", "Shakya"];
-      alert('duplicated array1 - ' + array1);
-      array2 = array1.filter((item,index)=>{
-        return (array1.indexOf(item) == index)
-      });
-      alert('array2 - ' + array2);
+      function myFunction(){
+        var array = [1,2,5,1,10,2,1000,-1,20,JSON.stringify({"a":10,"b":11})];
+        array = array.filter((item,index)=>{
+          return (array.indexOf(item) == index)
+        });
+        document.getElementById("val").innerHTML = 'duplicates have been removed from the array & the updated array is ' + array;
+      }
     </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>

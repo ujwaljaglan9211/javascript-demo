@@ -26,7 +26,7 @@
     </section>
     <script>
       function myFunction(){
-        var array = [1,2,5,10,1000,-1,20,{"a":10,"b":11}];
+        var array = [1,2,5,10,1000,-1,20,JSON.stringify({"a":10,"b":11})];
         var add = document.getElementsByName("name")[0].value;
         array.unshift(add);
         document.getElementById("val").innerHTML = add + ' has been added to the begining of the array & the updated array is ' + array;

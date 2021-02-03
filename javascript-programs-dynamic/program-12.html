@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 12</title>  
+  </head>
+  <body>
+    <script>
+      function insertObject(arr, obj) {
+        // find the last index
+        let index = arr.length;
+        // appending object to end of array
+        arr.splice(index, 0, JSON.stringify(object));   
+        alert('updated array is - ' + array);
+      }
+      // original array
+      let array = [1, 2, 3];
+      alert('original array is - ' + array);
+      // object to add
+      let object = {x: 12, y: 8};
+      alert('object to add in array is - ' + JSON.stringify(object));
+      // call the function
+      insertObject(array, object);
+    </script>
+  </body>
+</html>

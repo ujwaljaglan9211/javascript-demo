@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 17</title>  
+  </head>
+  <body>
+    <script>
+      var array1 = ["Vijendra","Singh"];
+      var array2 = ["Singh", "Shakya"];
+      alert('array1 - ' + array1);
+      alert('array2 - ' + array2);
+      // Merges both arrays and gets unique items
+      var array3 = array1.concat(array2);
+      array3 = array3.filter((item,index)=>{
+        return (array3.indexOf(item) == index)
+      });
+      alert('array3 - ' + array3);
+    </script>
+  </body>
+</html>

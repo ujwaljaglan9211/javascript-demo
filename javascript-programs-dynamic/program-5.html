@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript: Program 5</title>   
+  </head>
+  <body>
+    <script>
+      // program to generate range of numbers and characters
+      function* iterate(a, b) {
+        for (let i = a; i <= b; i += 1) {
+          yield i
+        }
+      }
+      function range(a, b) {
+        if(typeof a === 'string') {
+          let result = [...iterate(a.charCodeAt(), b.charCodeAt())].map(n => String.fromCharCode(n));
+          return result;
+        }
+        else {
+          let result = [...iterate(a, b)];
+          return result;
+        }
+      }
+      alert(range(1, 5));
+      alert(range('A', 'Z'));
+    </script>
+  </body>
+</html>

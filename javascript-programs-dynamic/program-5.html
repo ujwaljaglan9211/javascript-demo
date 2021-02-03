@@ -4,13 +4,88 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 5</title>   
+    <title>Javascript: Program 5</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 5 -Program to generate range of numbers and characters</h2>
+            <label for="number1">
+              <input type="number" name="number1" value="" placeholder="Enter number 1"/>
+              <span class="number1-error"></span>
+            </label>
+            <label for="number2">
+              <input type="number" name="number2" value="" placeholder="Enter number 2"/>
+              <span class="number2-error"></span>
+            </label>
+            <button onclick="numFunction()" class="btn btn-primary">Generate range of numbers</button>
+            <p class="mt-2">Result: <span id="val_num"></span></p>
+            <label for="char1">
+              <input type="text" name="char1" value="" maxlength="1" placeholder="Enter first character"/>
+              <span class="char1-error"></span>
+            </label>
+            <label for="char2">
+              <input type="text" name="char2" value="" maxlength="1" placeholder="Enter second character"/>
+              <span class="char2-error"></span>
+            </label>
+            <button onclick="charFunction()" class="btn btn-primary">Generate range of characters</button>
+            <p class="mt-2">Result: <span id="val_char"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
       // program to generate range of numbers and characters
+      function numFunction(){
+        num1 = document.getElementsByName("number1")[0].valueAsNumber;
+        num2 = document.getElementsByName("number2")[0].valueAsNumber;
+        if(num1 >num2){
+          min = num2;
+          max = num1;
+        }else{
+          min = num1;
+          max = num2;
+        }
+        document.getElementById("val_num").innerHTML = Array.range(min, max);
+      }
+      function charFunction(){
+        char1 = document.getElementsByName("char1")[0].value;
+        char2 = document.getElementsByName("char2")[0].value;
+        if(char1.charCodeAt() > char2.charCodeAt()){
+          min = char2;
+          max = char1;
+        }else{
+          min = char1;
+          max = char2;
+        }
+        document.getElementById("val_char").innerHTML = Array.range(min, max);
+      }
+      Array.range = function(a, b, step){
+        var A = [];
+        if(typeof a == 'number'){
+          A[0] = a;
+          step = step || 1;
+          while(a+step <= b){
+            A[A.length]= a+= step;
+          }
+        }
+        else {
+          var s = 'abcdefghijklmnopqrstuvwxyz';
+          if(a === a.toUpperCase()){
+            b = b.toUpperCase();
+            s = s.toUpperCase();
+          }
+          s = s.substring(s.indexOf(a), s.indexOf(b)+ 1);
+          A = s.split('');        
+        }
+        return A;
+      }
       function* iterate(a, b) {
-        for (let i = a; i <= b; i += 1) {
+        for (let i = a; i <= b; i++) {
           yield i
         }
       }
@@ -24,8 +99,12 @@
           return result;
         }
       }
-      alert(range(1, 5));
-      alert(range('A', 'Z'));
     </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>

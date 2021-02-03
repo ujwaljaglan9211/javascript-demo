@@ -4,17 +4,38 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Javascript: Program 9</title>  
+    <title>Javascript: Program 9</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Program 8 -Program to remove specific item from array & array is 1,2,5,10,1000,-1,20</h2>
+            <label for="name">
+              <input type="number" name="name" value="" placeholder="Enter item to remove"/>
+              <span class="name-error"></span>
+            </label>
+            <button onclick="myFunction()" class="btn btn-primary">Remove</button>
+            <p class="mt-2">Result: <span id="val"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
-      var a = ['a', 'b', 'z', '2', '1', '-1','hello'];
-      alert('original array - ' + a);
-      var index = a.indexOf('-1');
-      if (index !== -1) {
-        a.splice(index, 1);
+      function myFunction(){
+        var a = [1,2,5,10,1000,-1,20];
+        var remove = document.getElementsByName("name")[0].valueAsNumber;
+        var index = a.indexOf(remove);
+        if (index !== -1) {
+          a.splice(index, 1);
+          document.getElementById("val").innerHTML = remove + ' has been removed & the updated array is ' + a;
+        }else{
+          document.getElementById("val").innerHTML = remove + ' is not present in the array.';
+        }
       }
-      alert('-1 has been removed from array & the updated array - ' + a);
     </script>
   </body>
 </html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ecommerce: Demo Page</title>
+    <!-- favicon -->
+    <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- owl caousel slider css -->   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!-- Header starts here -->
+    <button type="button" class="mobile-nav-toggle d-lg-none"><i class="fa fa-bars"></i></button>
+    <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
+      <div class="container position-relative d-flex justify-content-end">
+        <div class="contact-links">
+          <a href="#" id="naveen1" class="twitter"><img src="http://staging18.com/staging/imarket-website/wp-content/themes/iMarket/assets/images/contact-form.svg" alt="" class="img-fluid">Contact Us</a>
+          <a href="#" class="facebook"><img src="http://staging18.com/staging/imarket-website/wp-content/themes/iMarket/assets/images/english.svg" alt="" class="img-fluid"> English</a>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="fixed-top header-transparent">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.svg" alt="Logo" title="Logo" class="img-fluid"/>
+        </a>
+        <nav class="main-nav d-none d-lg-block">
+          <ul class="position-relative">
+            <li class=""><a href="#hero" class="">Home</a></li>
+            <li class=""><a href="#" class="">About iMarket</a></li>
+            <li class=""><a href="#all-products" class="">Our Products</a></li>
+            <li class=""><a href="#insights" class="">Insights</a></li>
+            <li class=""><a href="#faqs" class="">FAQs</a></li>
+            <li class=""><a href="#" class="brokers scrollto">For Brokers</a></li>
+            <li class=""><a href="#" class="customers scrollto">For Customers</a></li>
+            <li class="shopping-cart-items-listing">
+              <a href="#">
+                <i class="fa fa-shopping-cart"></i>
+                 <span class="badge"></span>
+              </a>
+              <div class="container shopping-cart-container">
+                <div class="shopping-cart">
+                  <div class="shopping-cart-header">
+                    <!-- <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span> -->
+                    <div class="shopping-cart-total">
+                      <span class="lighter-text">Total:</span>
+                      <span class="main-color-text">₹ 0</span>
+                    </div>
+                  </div> <!--end shopping-cart-header -->         
+                  <ul class="shopping-cart-items">
+                  </ul>          
+                  <a href="#" class="checkout-button">Checkout</a>
+                </div> <!--end shopping-cart -->
+              </div> <!--end container -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header ends here -->
+    <!-- main content starts here -->
+    <section class="banner" id="hero">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-md-6 intro-info order-lg-first order-last">
+            <div>
+              <h2>Welcome To iMarket – A New Approach To Ecommerce</h2>
+            </div>
+            <div>
+              <a href="" class="btn-get-started scrollto">Sign Up</a>
+            </div>
+          </div>
+          <div class="col-lg-6 intro-img order-lg-last order-first">
+            <img src="http://staging18.com/staging/imarket-website/wp-content/uploads/2021/02/banner-img.svg" alt="Home" class="img-fluid animated">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="" id="products">
+      <div class="container">
+        <!-- <div class="col-12 mt-5 add-products">
+          <h2 class="text-center mt-5 mb-5">Add Products</h2>
+        </div> -->
+        <div class="row">
+          <div class="col-12 mt-5 mb-5 all-products" id="all-products">
+            <h2 class="text-center mt-5 mb-5">All Products</h2>
+            <div class="all-products-slider owl-carousel owl-theme">
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/apple.png" alt="Apple" title="Apple" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Apple</h5>
+                    <p>Price: 100/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="1" product-name="Apple" product-image="assets/images/apple.png" product-price="100">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/broccoli.png" alt="Broccoli" title="Broccoli" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Broccoli</h5>
+                    <p>Price: 25/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="2" product-name="Broccoli" product-image="assets/images/broccoli.png" product-price="25">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/cherry.png" alt="Cherry" title="Cherry" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Cherry</h5>
+                    <p>Price: 50/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="3" product-name="Cherry" product-image="assets/images/cherry.png" product-price="50">Add</a>
+                  </div>
+                  </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/grapes.png" alt="Grapes" title="Grapes" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Grapes</h5>
+                    <p>Price: 40/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="4" product-name="Grapes" product-image="assets/images/grapes.png" product-price="40">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/lichi.png" alt="Lichi" title="Lichi" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Lichi</h5>
+                    <p>Price: 120/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="5" product-name="Lichi" product-image="assets/images/lichi.png" product-price="120">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/okra.png" alt="Okra" title="Okra" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Okra</h5>
+                    <p>Price: 30/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="6" product-name="Okra" product-image="assets/images/okra.png" product-price="30">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/red-onion.png" alt="Red Onion" title="Red Onion" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Red Onion</h5>
+                    <p>Price: 40/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="7" product-name="Red Onion" product-image="assets/images/red-onion.png" product-price="40">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/potato.png" alt="Potato" title="Potato" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Potato</h5>
+                    <p>Price: 10/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="8" product-name="Potato" product-image="assets/images/potato.png" product-price="10">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/carrot.png" alt="Carrot" title="Carrot" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Carrot</h5>
+                    <p>Price: 15/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="9" product-name="Carrot" product-image="assets/images/carrot.png" product-price="15">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product">
+                  <img src="assets/images/reddish.jpeg" alt="Reddish" title="Reddish" />
+                  <div class="product-description d-inline-block pt-3 pb-2 text-center">
+                    <h5>Reddish</h5>
+                    <p>Price: 20/kg</p>
+                    <a href="javascript:void(0);" class="btn button" onclick="addWishlist(this); return false;" product-id="10" product-name="Reddish" product-image="assets/images/reddish.jpeg" product-price="20">Add</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <a href="#wishlist" class="btn button mt-5 mb-5" id="go-to-wishlist">Go to Wishlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12" id="wishlist">
+            <h2 class="text-center mt-5 mb-5">Products Wish List</h2>
+            <div class="table-responsive">          
+              <table class="table" id="product-listing">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Price/kg(in INR)</th>
+                    <th>Quanity (in kg)</th>
+                    <th>Total Amount</th>
+                    <th>Add Item</th>
+                    <th>Remove Item</th>
+                    <th>Add Cart</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          <!-- <div class="text-center mt-5">
+            <a href="#cart" class="btn button">Go to Cart</a>           
+          </div> -->
+          </div>
+          <!-- <div class="col-12" id="cart">
+            <div class="cart">
+              <h2 class="text-center mt-5 mb-5">Cart</h2>
+                <div class="table-responsive">          
+                  <table class="table" id="cart-listing">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Product Name</th>
+                        <th>Price/kg (in INR)</th>
+                        <th>Quanity (in kg)</th>
+                        <th>Total Amount</th>
+                        <th>Add Item</th>
+                        <th>Remove Item</th>
+                        <th>Delete Item</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div> -->
+        </div>
+        <h3 class="text-center mt-5 mb-5">Total Amount: <span id="total-amount"></span></h3>
+        </div>
+      </div>
+    </section>
+    <section class="" id="insights">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>2021</h2>
+            <h3>FOOD MARKET</h3>
+            <h4>SPECIAL OFFER</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="" id="faqs">
+      <div class="container">
+        <h2 class="text-center mb-5">FAQs</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Question1</h3>
+            <p>Answer 1</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Question1</h3>
+            <p>Answer 1</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Question1</h3>
+            <p>Answer 1</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Question1</h3>
+            <p>Answer 1</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main content ends here -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="text/javascript"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- slick Carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom javascript -->
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      // wishlist & cartlist empty array initialized 
+      var wishlist = [];
+      var cartlist = [];
+      // document.getElementById("total-amount").style.display='none';
+      // document.getElementById("go-to-wishlist").style.display='none';
+      // document.getElementById("wishlist").style.display='none';
+      // add item to wishlist starts here
+      function addWishlist(obj){
+        var temp = {};
+        var check;
+        var product_id = obj.getAttribute("product-id");
+        var product_name = obj.getAttribute("product-name");
+        var product_price = obj.getAttribute("product-price");
+        var product_image = obj.getAttribute("product-image");
+        var product_quantity = 1;
+        var product_ammount = product_price * product_quantity;
+        temp.id = product_id;
+        temp.name = product_name;
+        temp.image = product_image;
+        temp.price = product_price;
+        temp.quantity = product_quantity;
+        temp.ammount = product_ammount;
+        if(wishlist.length === 0){
+          wishlist.push(temp);
+        }else{
+          for (var index = 0; index < wishlist.length; ++index){
+            if(wishlist[index]['id'] === product_id){
+              wishlist[index]['quantity']++;
+              wishlist[index]['ammount'] = wishlist[index]['price'] * wishlist[index]['quantity'];
+              check =  true;
+              break;
+            }
+          }
+          if(!check){
+            wishlist.push(temp);
+          }
+        }
+        appendWishlist(wishlist);
+        return false;
+      }
+      // add item to wishlist ends here
+      // append items to wishlist starts here
+      function appendWishlist(wishlist){
+        var total_ammount = 0;
+        var items = wishlist.length;
+        var ulShopping = document.getElementsByClassName("shopping-cart-items");
+        var lis = document.querySelectorAll('.shopping-cart-items li');
+        for(var i=0; li=lis[i]; i++) {
+          li.parentNode.removeChild(li);
+        }
+        ulShopping.innerHTML = '';
+        var total_items = 0;
+        for(var i = 0; i < items; i++){
+          total_items = total_items + (wishlist[i].quantity);
+        }
+        var tbodyRef = document.getElementById('product-listing').getElementsByTagName('tbody')[0];
+        tbodyRef.innerHTML = '';
+        for(var i = wishlist.length-1;i>=0;i--){
+          var row = tbodyRef.insertRow(0);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+          var cell6 = row.insertCell(5);
+          var cell7 = row.insertCell(6);
+          var cell8 = row.insertCell(7);
+          cell1.innerHTML =  items;
+          cell2.innerHTML = wishlist[i]['name'];
+          cell3.innerHTML = wishlist[i]['price'];
+          cell4.innerHTML = wishlist[i]['quantity'];
+          cell5.innerHTML = wishlist[i]['ammount'];
+          cell6.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-plus' aria-hidden='true' onclick='addMoreWishlist(this); return false;' p-id='"+wishlist[i]['id']+"'></i></a>";
+          cell7.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-minus' aria-hidden='true' onclick='removeOneWishlist(this); return false;' p-id='"+wishlist[i]['id']+"'></i></a>";
+          cell8.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-shopping-cart' aria-hidden='true' onclick='addCart(this); return false;' p-id='"+wishlist[i]['id']+"'></i></a>";
+          items--;
+        }
+        for(var i = 0;i< wishlist.length;i++){
+          total_ammount = total_ammount + wishlist[i]['ammount'];
+          var li = document.createElement("li");
+          li.className = 'clearfix';
+          var img = document.createElement("img");
+          img.src = wishlist[i]['image'];
+          img.alt = wishlist[i]['name'];
+          var spanName = document.createElement("span");
+          spanName.className = 'item-name';
+          spanName.innerHTML = wishlist[i]['name'];
+          var spanPrice = document.createElement("span");
+          spanPrice.className = 'item-price';
+          spanPrice.innerHTML = '₹ '+wishlist[i]['ammount'];
+          var spanQuantity = document.createElement("span");
+          spanQuantity.className = 'item-quantity';
+          spanQuantity.innerHTML = 'Quantity: '+wishlist[i]['quantity'];
+          li.appendChild(img);
+          li.appendChild(spanName);
+          li.appendChild(spanPrice);
+          li.appendChild(spanQuantity);
+          $(".shopping-cart-items").append(li);
+          // ulShopping.appendChild(li);
+        }
+        document.getElementsByClassName("shopping-cart-items-listing")[0].childNodes[1].getElementsByClassName("badge").item(0).innerHTML= total_items;
+        document.getElementsByClassName("shopping-cart-total")[0].childNodes[3].innerHTML = '₹ '+total_ammount;
+        document.getElementById("total-amount").innerHTML = '₹ '+total_ammount;
+      }
+      // append items to wishlist ends here
+      // addMoreWishlist starts here
+      function addMoreWishlist(obj){
+        var p_id = obj.getAttribute('p-id');
+        for (var index = 0; index < wishlist.length; ++index){
+          if(wishlist[index]['id'] === p_id){
+            wishlist[index]['quantity']++;
+            wishlist[index]['ammount'] = wishlist[index]['price'] * wishlist[index]['quantity'];
+          }
+        }
+        appendWishlist(wishlist);
+        return false;
+      }
+      // removeOneWishlist starts here
+      function removeOneWishlist(obj){
+        var p_id = obj.getAttribute('p-id');
+        for (var index = 0; index < wishlist.length; ++index){
+          if(wishlist[index]['id'] === p_id){
+            if(wishlist[index]['quantity'] >1){
+              wishlist[index]['quantity']--;
+              wishlist[index]['ammount'] = wishlist[index]['price'] * wishlist[index]['quantity'];
+            }else{
+              wishlist.splice(index, 1);
+            }
+          }
+        }
+        appendWishlist(wishlist);
+        return false;
+      }
+      // add item to cartlist starts here
+      function addCart(obj){
+        var check;
+        var p_id = obj.getAttribute('p-id');
+        if(cartlist.length === 0){          
+          for(var p=0;p<wishlist.length;p++){
+            if(wishlist[p]['id'] === p_id){
+              cartlist.push(wishlist[p]);
+              break;
+            }
+          }
+        }else{
+          for (var index = 0; index < cartlist.length; ++index){
+            if(cartlist[index]['id'] === p_id){
+              cartlist[index]['quantity'] == wishlist[index]['quantity'];
+              cartlist[index]['ammount'] == wishlist[index]['price'] * wishlist[index]['quantity']
+              check =  true;
+              break;
+            }
+          }
+          if(!check){
+            for(var p=0;p<wishlist.length;p++){
+              if(wishlist[p]['id'] === p_id){
+                cartlist.push(wishlist[p]);
+              }
+            }
+          }
+        }
+        appendCartlist(cartlist);
+        return false;
+      }
+      // add item to cart ends here
+      // append items to cartlist starts here
+      function appendCartlist(cartlist){
+        var items = cartlist.length;
+        var tbodyRef = document.getElementById('cart-listing').getElementsByTagName('tbody')[0];
+        tbodyRef.innerHTML = '';
+        for(var i=cartlist.length-1;i>=0;i--){
+          var row = tbodyRef.insertRow(0);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+          var cell6 = row.insertCell(5);
+          var cell7 = row.insertCell(6);
+          var cell8 = row.insertCell(7);
+          cell1.innerHTML =  items;
+          cell2.innerHTML = cartlist[i]['name'];
+          cell3.innerHTML = cartlist[i]['price'];
+          cell4.innerHTML = cartlist[i]['quantity'];
+          cell5.innerHTML = cartlist[i]['ammount'];
+          cell6.innerHTML = "<i class='fa fa-plus' aria-hidden='true' onclick='addMoreCart(this); return false;' p-id='"+cartlist[i]['id']+"'></i>";
+          cell7.innerHTML = "<i class='fa fa-minus' aria-hidden='true' onclick='removeOneCart(this); return false;' p-id='"+cartlist[i]['id']+"'></i>";
+          cell8.innerHTML = "<i class='fa fa-trash' aria-hidden='true' onclick='removeCart(this); return false;' p-id='"+cartlist[i]['id']+"'></i>";
+          items--;
+        }
+      }
+      // append items to cartlist ends here
+      // addMoreCart starts here
+      function addMoreWishlist(obj){
+        var p_id = obj.getAttribute('p-id');
+        for (var index = 0; index < wishlist.length; ++index){
+          if(wishlist[index]['id'] === p_id){
+            wishlist[index]['quantity']++;
+            wishlist[index]['ammount'] = wishlist[index]['price'] * wishlist[index]['quantity'];
+          }
+        }
+        appendWishlist(wishlist);
+        return false;
+      }
+      // removeOneCart starts here
+      function removeOneCart(obj){
+        var p_id = obj.getAttribute('p-id');
+        for (var index = 0; index < wishlist.length; ++index){
+          if(wishlist[index]['id'] === p_id){
+            if(wishlist[index]['quantity'] >1){
+              wishlist[index]['quantity']--;
+              wishlist[index]['ammount'] = wishlist[index]['price'] * wishlist[index]['quantity'];
+            }else{
+              wishlist.splice(index, 1);
+            }
+          }
+        }
+        appendWishlist(wishlist);
+        return false;
+      }
+      function addMoreCart(obj){
+        var p_id = this.getAttribute('p-id');
+      }
+    </script>
+  </body>
+</html>

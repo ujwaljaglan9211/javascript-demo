@@ -26,7 +26,7 @@
     let animationDuration = 500; 
     // Animate the html/body with  the scrollTop() method 
     $('html, body').animate({ 
-        scrollTop: scrollPosition 
+      scrollTop: scrollPosition 
     }, animationDuration); 
   });
   
@@ -38,19 +38,16 @@
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fa fa-bars"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
-
     $(document).on('click', '.mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('.mobile-nav-overly').toggle();
     });
-
     $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
       e.preventDefault();
       $(this).next().slideToggle(300);
       $(this).parent().toggleClass('active');
     });
-
     $(document).click(function(e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -66,7 +63,19 @@
   }
 
   $(document).ready(function() {   
-    // Get products from json
+    // show mini cart on click
+    $("li.shopping-cart-items-listing").on("click", function(){
+      $("li.shopping-cart-items-listing .shopping-cart-container").show();
+    });
+    // close mobile menu on button click
+    $(document).on("click", ".checkout-button", function () {
+      if ($('body').hasClass('mobile-nav-active')) {
+        $('body').removeClass('mobile-nav-active');
+        $('.mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+        $('.mobile-nav-overly').fadeOut();
+      }
+    }); 
+    // Get products from json using AJAX call
     $.ajax({
       url: 'assets/data/data.json',
       dataType: 'json',
@@ -157,20 +166,20 @@
     $("#flip-container").click(function() {
       $(this).toggleClass("flip-container");
     });
-    // LocalStorage GET
+    // GET user accout details fromLocalStorage
     var account = JSON.parse(localStorage.getItem("account"));
     checkLoggedIn(account);
-    // email validation
+    // email validation function
     function validateEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
     }
-    // password validation
+    // password validation function
     function validatePassword(password) {
       const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
       return re.test(String(password));
     }
-    // check whether logged in or not
+    // check whether user is logged in or not
     function checkLoggedIn(account){
       if(account && account.isLoggedIn === true){
         $("#checkoutForm h4").text("Checkout");
@@ -190,7 +199,7 @@
         $("#paymentclick").hide();
       }
     }
-    // Login
+    // Login form submit action
     $('#login').click(function() {
       console.log('account', account);
       var emailLogin = $("#emailLogin").val();
@@ -208,7 +217,7 @@
         $("#loginError").text("Either email or password are incorrect!").show().delay(5000).fadeOut();
       }
     });
-    // register
+    // Register form submit action
     $('#register').click(function() {
       var name = $("#name").val();
       var email = $("#email").val();
@@ -236,10 +245,11 @@
         payment();
       }
     });
-    // click of but now button
+    // buy now button click call payment function
     $("#paymentclick").on('click', function(){ 
       payment();
     });
+    // Payment function
     function payment(){
       var total_ammount = 0;
       var description = '';

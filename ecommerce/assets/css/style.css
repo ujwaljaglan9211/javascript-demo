@@ -288,8 +288,12 @@ section{
 	text-align:center;
 	margin-right: 15px;
 }
-.mobile-nav a.brokers:hover {color: #fff; background: #000;}
-.mobile-nav a.customers:hover {background:#52AF3C; color: #fff; border: 2px solid #52AF3C;}
+.mobile-nav a.brokers:hover {
+  color: #fff; background: #000;
+}
+.mobile-nav a.customers:hover {
+  background:#52AF3C; color: #fff; border: 2px solid #52AF3C;
+}
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
   color: #52AF3C;
   text-decoration: none;
@@ -386,7 +390,6 @@ section.banner{
   height: 100vh;
   position: relative;
   background: #004D9B;
-  /* background: #f5f8fd url(../img/intro-bg.jpg) center top no-repeat; */
   background-size: cover;
   padding-top: 110px;
 }
@@ -609,24 +612,20 @@ section.banner{
     padding: 10px 40px;
     text-align: center;
   }
-
   .shopping-cart-items img {
     float: left;
     margin-right: 12px;
     width: 60px;
   }
-
   .shopping-cart-items .item-name {
     display: block;
     padding-top: 10px;
     font-size: 16px;
   }
-
   .shopping-cart-items .item-price {
     color: #004D9B;
     margin-right: 8px;
   }
-
   .shopping-cart-items  .item-quantity {
     color: #52AF3C;
   }
@@ -684,7 +683,42 @@ section.banner{
   #header.header-scrolled {
     top: 0px;
   }
-  li.shopping-cart-items-listing {
+  li.shopping-cart-items-listing .shopping-cart-container{
     display: none;
+    background: white;
+    padding: 15px;
+    overflow-y: scroll;
+    max-height: 270px;
+  }
+  li.shopping-cart-items-listing .shopping-cart-container img{
+    width: 100%;
+    max-width: 40px;
+  }
+  li.shopping-cart-items-listing .shopping-cart-container a.button{
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 24px;
+    transition: 0.5s;
+    color: #fff;
+    background: #004D9B;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  li.shopping-cart-items-listing .shopping-cart-container span.item-name + span.item-price + span.item-quantity{
+    margin-left: 5px;
+  }
+  #hero .intro-info h2 {
+    font-size: 34px;
+    line-height: 50px;
+}
+}
+@media (min-width: 992px) and (max-width:1140px){
+  .main-nav > ul > li {
+    padding-left: 12px;
   }
 }

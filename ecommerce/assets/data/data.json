@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "itemName": "Potato",
+    "itemPrice": 15,
+    "itemImage": "assets/images/potato.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 2,
+    "itemName": "Red Onion",
+    "itemPrice": 10,
+    "itemImage": "assets/images/red-onion.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 3,
+    "itemName": "Okra",
+    "itemPrice": 15,
+    "itemImage": "assets/images/okra.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 4,
+    "itemName": "Onion",
+    "itemPrice": 20,
+    "itemImage": "assets/images/onion.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 5,
+    "itemName": "Cherry",
+    "itemPrice": 12,
+    "itemImage": "assets/images/cherry.png",
+    "category": "fruit",
+    "itemQuantity": 1
+  },
+  {
+    "id": 6,
+    "itemName": "Lichi",
+    "itemPrice": 12,
+    "itemImage": "assets/images/lichi.png",
+    "category": "fruit",
+    "itemQuantity": 1
+  },
+  {
+    "id": 7,
+    "itemName": "Apple",
+    "itemPrice": 12,
+    "itemImage": "assets/images/apple.png",
+    "category": "fruit",
+    "itemQuantity": 1
+  },
+  {
+    "id": 8,
+    "itemName": "Banana",
+    "itemPrice": 12,
+    "itemImage": "assets/images/banana.png",
+    "category": "fruit",
+    "itemQuantity": 1
+  },
+  {
+    "id": 9,
+    "itemName": "Carrot",
+    "itemPrice": 15,
+    "itemImage": "assets/images/carrot.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 10,
+    "itemName": "Broccoli",
+    "itemPrice": 15,
+    "itemImage": "assets/images/broccoli.png",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 11,
+    "itemName": "Reddish",
+    "itemPrice": 15,
+    "itemImage": "assets/images/reddish.jpeg",
+    "category": "vegetable",
+    "itemQuantity": 1
+  },
+  {
+    "id": 12,
+    "itemName": "Grapes",
+    "itemPrice": 15,
+    "itemImage": "assets/images/grapes.png",
+    "category": "fruit",
+    "itemQuantity": 1
+  }
+]

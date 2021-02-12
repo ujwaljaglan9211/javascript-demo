@@ -64,8 +64,9 @@
 
   $(document).ready(function() {   
     // show mini cart on click
-    $("li.shopping-cart-items-listing").on("click", function(){
-      $("li.shopping-cart-items-listing .shopping-cart-container").show();
+    $("a.shopping-cart-items-listing-mobile").on("click", function(){
+      $(this).siblings(".shopping-cart-container").toggle();
+      // $(".shopping-cart-container").show();
     });
     // close mobile menu on button click
     $(document).on("click", ".checkout-button", function () {
@@ -188,6 +189,7 @@
         $("#checkoutForm h4").text("Checkout");
         $("#signin").hide();
         $("#registeration").hide();
+        $("#pay-now span").text("");
         $("#pay-now").show();
       }else if(account && account.isLoggedIn === false){
         $("#checkoutForm h4").text("Login");
@@ -214,7 +216,6 @@
       if(!validatePassword(passwordLogin)){
         $(".passwordLoginError").text("Password is invalid!").show().delay(5000).fadeOut();
       }
-      console.log('account', account);
       if(account.email === emailLogin && account.password === passwordLogin){
         account.isLoggedIn = true;
         $("#signin").hide();
@@ -282,7 +283,7 @@
           "image": "assets/images/logo.svg",// COMPANY LOGO
           "handler": function (response) {
             // AFTER TRANSACTION IS COMPLETE YOU WILL GET THE RESPONSE HERE
-            console.log('response',response);
+            // console.log('response',response);
             var temp = {};
             temp.razorpay_payment_id = response.razorpay_payment_id;
             temp.email = account.email;
@@ -305,7 +306,6 @@
             "color": "#52AF3C" // screen color
           }
         };
-        console.log('options', options);
         var propay = new Razorpay(options);
         propay.open();
       }else{

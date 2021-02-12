@@ -246,6 +246,7 @@
       localStorage.setItem("account", JSON.stringify(account))
       $("#signin").show();
       $("#registeration").hide();
+      $("#paymentclick").hide();
       // payment function
       payment();
     });

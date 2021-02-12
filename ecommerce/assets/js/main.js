@@ -185,18 +185,18 @@
         $("#checkoutForm h4").text("Checkout");
         $("#signin").hide();
         $("#registeration").hide();
-        $("#paymentclick").hide();
+        $("#pay-now").show();
       }else if(account && account.isLoggedIn === false){
         $("#checkoutForm h4").text("Login");
         $("#pay-now span").text("");
         $("#signin").show();
         $("#registeration").hide();
-        $("#paymentclick").hide();
+        $("#pay-now").hide();
       }else{
         $("#pay-now span").text("");
         $("#signin").hide();
         $("#registeration").show();
-        $("#paymentclick").hide();
+        $("#pay-now").hide();
       }
     }
     // Login form submit action
@@ -214,7 +214,7 @@
         account.isLoggedIn = true;
         $("#signin").hide();
         $("#registeration").hide();
-        $("#paymentclick").show();
+        $("#pay-now").show();
         localStorage.setItem("account", JSON.stringify(account));
       }else{
         $("#loginError").text("Either email or password are incorrect!").show().delay(5000).fadeOut();
@@ -246,7 +246,7 @@
       localStorage.setItem("account", JSON.stringify(account))
       $("#signin").show();
       $("#registeration").hide();
-      $("#paymentclick").hide();
+      $("#pay-now").hide();
       // payment function
       payment();
     });

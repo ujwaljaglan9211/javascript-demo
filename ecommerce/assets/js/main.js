@@ -263,6 +263,7 @@
     function payment(){
       var total_ammount = 0;
       var description = '';
+      account = getLocalStorage();
       if(wishlist.length>0){
         $("#pay-now").show();
         for (var i = 0; i < wishlist.length; i++) {

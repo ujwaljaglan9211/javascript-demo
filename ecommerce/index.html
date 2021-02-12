@@ -27,10 +27,10 @@
     <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
       <div class="container position-relative d-flex justify-content-end">
         <div class="contact-links">
-          <a href="#" id="naveen1" class="twitter">
-            <img src="http://staging18.com/staging/imarket-website/wp-content/themes/iMarket/assets/images/contact-form.svg" alt="" class="img-fluid">Contact Us</a>
-          <a href="#" class="facebook">
-            <img src="http://staging18.com/staging/imarket-website/wp-content/themes/iMarket/assets/images/english.svg"alt="" class="img-fluid"> English</a>
+          <a href="javascript:void(0);" id="naveen1" class="twitter">
+            <img src="assets/images/contact-form.svg" alt="" class="img-fluid">Contact Us</a>
+          <a href="javascript:void(0);" class="facebook">
+            <img src="assets/images/english.svg"alt="" class="img-fluid"> English</a>
         </div>
       </div>
     </div>
@@ -42,14 +42,14 @@
         <nav class="main-nav d-none d-lg-block">
           <ul class="position-relative">
             <li class=""><a href="#hero" class="">Home</a></li>
-            <li class=""><a href="#" class="">About iMarket</a></li>
+            <li class=""><a href="javascript:void(0);" class="">About iMarket</a></li>
             <li class=""><a href="#all-products" class="">Our Products</a></li>
             <li class=""><a href="#insights" class="">Insights</a></li>
             <li class=""><a href="#faqs" class="">FAQs</a></li>
-            <li class=""><a href="#" class="brokers scrollto">For Brokers</a></li>
-            <li class=""><a href="#" class="customers scrollto">For Customers</a></li>
+            <li class=""><a href="javascript:void(0);" class="brokers scrollto">For Brokers</a></li>
+            <li class=""><a href="javascript:void(0);" class="customers scrollto">For Customers</a></li>
             <li class="shopping-cart-items-listing">
-              <a href="#">
+              <a href="javascript:void(0);">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="badge"></span>
               </a>
@@ -63,7 +63,7 @@
                   </div>
                   <ul class="shopping-cart-items">
                   </ul>
-                  <a href="#" class="checkout-button btn button" data-toggle="modal" data-target="#checkoutForm"
+                  <a href="javascript:void(0);" class="checkout-button btn button" data-toggle="modal" data-target="#checkoutForm"
                     data-backdrop="static" data-keyboard="false">Checkout</a>
                 </div>
               </div>
@@ -155,12 +155,12 @@
                         </div>
                         <h3 class="text-white">"iMarket"</h3>
                         <p class="text-white">Shop with us</p>
-                        <a href="#" class="btn button proceed">Proceed</a>
+                        <a href="javascript:void(0);" class="btn button proceed">Proceed</a>
                       </div>
                       <div class="col-12 px-5 py-5 back mw-100 p-0 m-auto w-100 align-items-center">
                         <div class="" id="signin">
                           <h3>You must login first!</h3>
-                          <form action="" class="login-form" method="POST">
+                          <form action="" class="login-form" id="loginForm" method="POST">
                             <div class="form-group">
                               <label for="emailLogin">Email address</label>
                               <input type="email" class="form-control" id="emailLogin" aria-describedby="emailLoginHelp" placeholder="Enter email" autocomplete="off" required>
@@ -177,8 +177,8 @@
                           </form>
                         </div>
                         <div class="" id="registeration">
-                          <h3>Currently you are not logged in.Please register yourself first!</h3>
-                          <form action="" class="registration-form" method="POST">
+                          <h3>Please Register yourself first!</h3>
+                          <form action="" class="registration-form" id="registrationForm" method="POST">
                             <div class="form-group">
                               <label for="name">Name</label>
                               <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" autocomplete="off" required>
@@ -198,7 +198,7 @@
                             </div>
                             <div class="form-group">
                               <label for="shippingAddress">Shipping Address</label>
-                              <textarea class="form-control" id="shippingAddress" aria-describedby="shippingAddressHelp" placeholder="Enter shippingAddress" autocomplete="off" required></textarea>
+                              <textarea class="form-control" id="shippingAddress" aria-describedby="shippingAddressHelp" rows="6" placeholder="Enter shippingAddress" autocomplete="off" required></textarea>
                               <span class="shippingAddressError text-danger"></span>
                             </div>
                             <div class="form-group">

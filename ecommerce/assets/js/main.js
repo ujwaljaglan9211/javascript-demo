@@ -200,8 +200,8 @@
       }
     }
     // Login form submit action
-    $('#login').click(function() {
-      console.log('account', account);
+    $("#loginForm").submit(function(e) {
+      e.preventDefault();
       var emailLogin = $("#emailLogin").val();
       if(!validateEmail(emailLogin)){
         $(".emailLoginError").text("Email is invalid!").show().delay(5000).fadeOut();
@@ -212,13 +212,17 @@
       }
       if(account.email === emailLogin && account.password === passwordLogin){
         account.isLoggedIn = true;
+        $("#signin").hide();
+        $("#registeration").hide();
+        $("#paymentclick").show();
         localStorage.setItem("account", JSON.stringify(account));
       }else{
         $("#loginError").text("Either email or password are incorrect!").show().delay(5000).fadeOut();
       }
     });
     // Register form submit action
-    $('#register').click(function() {
+    $("#registrationForm").submit(function(e) {
+      e.preventDefault();
       var name = $("#name").val();
       var email = $("#email").val();
       var phone = $("#phone").val();
@@ -239,11 +243,11 @@
       account.address = address;
       account.password = password;
       account.isLoggedIn = false;
-      if(localStorage.setItem("account", JSON.stringify(account))){
-        $("#registeration").hide();
-        // payment function
-        payment();
-      }
+      localStorage.setItem("account", JSON.stringify(account))
+      $("#signin").show();
+      $("#registeration").hide();
+      // payment function
+      payment();
     });
     // buy now button click call payment function
     $("#paymentclick").on('click', function(){ 

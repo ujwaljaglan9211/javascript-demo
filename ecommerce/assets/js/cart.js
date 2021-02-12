@@ -3,7 +3,6 @@ var wishlist = [];
 var payments = [];
 // add item to wishlist starts here
 function addWishlist(obj) {
-  $("#paymentclick").show();
   $("#pay-now span").text("");
   document.getElementById("go-to-wishlist").style.display = 'inline-block';
   document.getElementById("wishlist").style.display = 'block';

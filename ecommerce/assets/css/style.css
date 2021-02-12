@@ -267,10 +267,10 @@ section{
   font-weight: 500;
 }
 .mobile-nav a.brokers {
-    padding: 10px 22px;
-    margin-left: 18px;
-    border-radius: 24px;
-    color: #fff;
+  padding: 10px 22px;
+  margin-left: 18px;
+  border-radius: 24px;
+  color: #fff;
 	border: 2px solid #52AF3C;
 	transition: 0.5s;
 	text-align:center;
@@ -279,10 +279,10 @@ section{
 	background:#52AF3C;
 }
 .mobile-nav a.customers {
-    padding: 10px 22px;
-    margin-left: 18px;
-    border-radius: 24px;
-    color: #fff;
+  padding: 10px 22px;
+  margin-left: 18px;
+  border-radius: 24px;
+  color: #fff;
 	border: 2px solid #FFFFFF;
 	transition: 0.5s;
 	text-align:center;
@@ -365,6 +365,9 @@ section{
 div#signin {
   width: 100%;
 }
+.back{
+  justify-content: start !important;
+}
 /* checkoutModal ends here */
 /* checkout form */
 .form-control:focus {
@@ -375,7 +378,9 @@ div#signin {
   overflow-y: scroll;
   max-height: 650px;
 }
-
+form#registrationForm {
+  margin: 30px 0px;
+}
 /* checkout form */
 section.banner{
   width: 100%;

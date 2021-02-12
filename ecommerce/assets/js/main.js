@@ -265,7 +265,7 @@
       var description = '';
       account = getLocalStorage();
       if(wishlist.length>0){
-        $("#pay-now").show();
+        $("#pay-now #paymentclick").show();
         for (var i = 0; i < wishlist.length; i++) {
           total_ammount = total_ammount + wishlist[i]['ammount'];
           description = description +  wishlist[i]['name'] + "(" +  wishlist[i]['quantity'] + "),";         
@@ -307,7 +307,7 @@
         propay.open();
       }else{
         $("#pay-now span").text("Your cart is empty!");
-        $("#pay-now").hide();
+        $("#pay-now #paymentclick").hide();
       }
     }
  });

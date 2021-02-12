@@ -167,7 +167,10 @@
       $(this).toggleClass("flip-container");
     });
     // GET user accout details fromLocalStorage
-    var account = JSON.parse(localStorage.getItem("account"));
+    var account = getLocalStorage();
+    function getLocalStorage(){
+      return JSON.parse(localStorage.getItem("account"));
+    }
     checkLoggedIn(account);
     // email validation function
     function validateEmail(email) {
@@ -202,6 +205,7 @@
     // Login form submit action
     $("#loginForm").submit(function(e) {
       e.preventDefault();
+      account = getLocalStorage();
       var emailLogin = $("#emailLogin").val();
       if(!validateEmail(emailLogin)){
         $(".emailLoginError").text("Email is invalid!").show().delay(5000).fadeOut();
@@ -210,6 +214,7 @@
       if(!validatePassword(passwordLogin)){
         $(".passwordLoginError").text("Password is invalid!").show().delay(5000).fadeOut();
       }
+      console.log('account', account);
       if(account.email === emailLogin && account.password === passwordLogin){
         account.isLoggedIn = true;
         $("#signin").hide();

@@ -224,6 +224,8 @@
       }else{
         $("#loginError").text("Either email or password are incorrect!").show().delay(5000).fadeOut();
       }
+      // Payment function
+      payment();
     });
     // Register form submit action
     $("#registrationForm").submit(function(e) {
@@ -264,8 +266,9 @@
       var total_ammount = 0;
       var description = '';
       account = getLocalStorage();
-      if(wishlist.length>0){
+      if(wishlist.length>0 && account.isLoggedIn === true){
         $("#pay-now #paymentclick").show();
+        $("#pay-now span").text("");
         for (var i = 0; i < wishlist.length; i++) {
           total_ammount = total_ammount + wishlist[i]['ammount'];
           description = description +  wishlist[i]['name'] + "(" +  wishlist[i]['quantity'] + "),";         

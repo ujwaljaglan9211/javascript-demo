@@ -1,2 +1,3 @@
 # javascript-demo
-This repository for the javascript demo programs (ecommerce, javascript-programs & javascript-programs-dynamic).
+This repository for the javascript demo programs.
+- including ecommerce, set of javascript-programs & set of javascript-programs having dynamic inputs

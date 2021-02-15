@@ -333,12 +333,11 @@ section{
   text-align: right;
 }
 .mobile-nav-toggle i {
-  margin: 24px 18px 0 0;
+  margin: 24px 18px;
   color: #39ce16;
 }
 #header.header-scrolled i{
-  margin: 5px 5px;
-  color: #004d9b;
+  color: #55ce1d;
 }
 .mobile-nav-overly {
   width: 100%;
@@ -359,6 +358,9 @@ section{
 }
 .mobile-nav-active .mobile-nav-toggle i {
   color: #fff;
+}
+span.item-increase a, span.item-decrease a, span.item-delete a {
+  padding: 10px 15px !important;
 }
 /* Mobile Navigation ends here*/
 /* checkoutForm starts here*/
@@ -572,6 +574,9 @@ section.banner{
   line-height: 1.3;
 }
 @media (min-width: 992px){
+  .mobile-mini-cart.shopping-cart-container{
+    display: none;
+  }
   #hero .intro-info {
     padding-top: 100px;
     padding-left: 48px;
@@ -588,7 +593,7 @@ section.banner{
     margin: 30px -5px;
     right: -18px;
     background: white;
-    width: 320px;
+    width: 400px;
     border-radius: 3px;
     padding: 20px;
   }
@@ -675,6 +680,49 @@ section.banner{
   }
 }
 @media (max-width: 992px){
+  nav.main-nav{
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    display: none;
+  }
+  ul.position-relative {
+    display: grid;
+  }
+  .main-nav > ul > li {
+    position: relative;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .main-nav > ul > li:nth-last-child(2) {
+    padding: 10px;
+  }
+  .main-nav > ul > li:nth-last-child(3) {
+    padding: 10px;
+  }
+  .main-nav a {
+    color: #000;
+  }
+  .main-nav > ul > li a.brokers {
+    display: inline-block;
+    margin: 0;
+    color: #fff !important;
+    border: 2px solid #52AF3C;
+  }
+  .main-nav > ul > li a.customers {
+    background: #004d9b;
+    display: inline-block;
+    margin: 0;
+    color: #fff !important;
+    border: 2px solid #004D9B !important;
+  }
+  .shopping-cart-items-listing-mobile span.badge{
+    display: inline-block;
+    color: #39ce16 !important;
+  }
   #hero {
     height: auto;
     padding: 100px 0 60px 0;
@@ -708,7 +756,7 @@ section.banner{
     top: 76px;
     right: 0;
     background: #fff;
-    width: 315px;
+    width: 450px;
     padding: 30px 15px;
   }
   .shopping-cart-container .shopping-cart {

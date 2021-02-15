@@ -3,7 +3,6 @@ var wishlist = [];
 var payments = [];
 // add item to wishlist starts here
 function addWishlist(obj) {
-  $("#pay-now span").text("");
   document.getElementById("go-to-wishlist").style.display = 'inline-block';
   document.getElementById("wishlist").style.display = 'block';
   document.getElementById("total-amount").style.display = 'block';
@@ -84,23 +83,34 @@ function appendWishlist(wishlist) {
     img.alt = wishlist[i]['name'];
     var spanName = document.createElement("span");
     spanName.className = 'item-name';
-    spanName.innerHTML = wishlist[i]['name'];
+    spanName.innerHTML = wishlist[i]['name']+' ';
     var spanPrice = document.createElement("span");
     spanPrice.className = 'item-price';
-    spanPrice.innerHTML = '₹ ' + wishlist[i]['ammount'];
+    spanPrice.innerHTML = '₹ ' + wishlist[i]['ammount']+' ';
     var spanQuantity = document.createElement("span");
     spanQuantity.className = 'item-quantity';
-    spanQuantity.innerHTML = 'Quantity: ' + wishlist[i]['quantity'];
+    spanQuantity.innerHTML = 'Quantity: ' + wishlist[i]['quantity']+' ';
+    var spanIncrease = document.createElement("span");
+    spanIncrease.className = 'item-increase';
+    spanIncrease.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-plus' aria-hidden='true' onclick='addMoreWishlist(this); return false;' p-id='" + wishlist[i]['id'] + "'></i></a>";
+    var spanDecrease = document.createElement("span");
+    spanDecrease.className = 'item-decrease';
+    spanDecrease.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-minus' aria-hidden='true' onclick='removeOneWishlist(this); return false;' p-id='" + wishlist[i]['id'] + "'></i></a>";
+    var spanDelete = document.createElement("span");
+    spanDelete.className = 'item-delete';
+    spanDelete.innerHTML = "<a href='javascript:void(0);'><i class='fa fa-trash' aria-hidden='true' onclick='deleteOneWishlist(this); return false;' p-id='" + wishlist[i]['id'] + "'></i></a>";
     li.appendChild(img);
     li.appendChild(spanName);
     li.appendChild(spanPrice);
     li.appendChild(spanQuantity);
+    li.appendChild(spanIncrease);
+    li.appendChild(spanDecrease);
+    li.appendChild(spanDelete);
     $(".shopping-cart-items").append(li);
     // ulShopping.appendChild(li);
   }
   document.getElementsByClassName("shopping-cart-items-listing")[0].childNodes[1].getElementsByClassName("badge").item(0).innerHTML = total_items;
   document.getElementsByClassName("shopping-cart-items-listing-mobile")[0].childNodes[3].innerHTML = total_items;
-  console.log(document.getElementById("desktop-total-price"));
   document.getElementById("desktop-total-price").innerHTML = '₹ ' + total_ammount;
   document.getElementById("total-amount").innerHTML = '₹ ' + total_ammount;
   document.getElementById("mobile-total-price").innerHTML = '₹ ' + total_ammount;

@@ -99,10 +99,10 @@ function appendWishlist(wishlist) {
     // ulShopping.appendChild(li);
   }
   document.getElementsByClassName("shopping-cart-items-listing")[0].childNodes[1].getElementsByClassName("badge").item(0).innerHTML = total_items;
-  console.log(document.getElementsByClassName("shopping-cart-items-listing-mobile")[0].childNodes[3]);
   document.getElementsByClassName("shopping-cart-items-listing-mobile")[0].childNodes[3].innerHTML = total_items;
-  document.getElementsByClassName("shopping-cart-total")[0].childNodes[3].innerHTML = '₹ ' + total_ammount;
-  document.getElementById("total-amount").childNodes[1].innerHTML = '₹ ' + total_ammount;
+  console.log(document.getElementById("desktop-total-price"));
+  document.getElementById("desktop-total-price").innerHTML = '₹ ' + total_ammount;
+  document.getElementById("mobile-total-price").innerHTML = '₹ ' + total_ammount;
 }
 // addMoreWishlist starts here
 function addMoreWishlist(obj) {

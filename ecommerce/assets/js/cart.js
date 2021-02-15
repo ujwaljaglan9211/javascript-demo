@@ -102,6 +102,7 @@ function appendWishlist(wishlist) {
   document.getElementsByClassName("shopping-cart-items-listing-mobile")[0].childNodes[3].innerHTML = total_items;
   console.log(document.getElementById("desktop-total-price"));
   document.getElementById("desktop-total-price").innerHTML = '₹ ' + total_ammount;
+  document.getElementById("total-amount").innerHTML = '₹ ' + total_ammount;
   document.getElementById("mobile-total-price").innerHTML = '₹ ' + total_ammount;
 }
 // addMoreWishlist starts here

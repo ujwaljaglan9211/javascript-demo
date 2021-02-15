@@ -360,7 +360,7 @@ section{
   color: #fff;
 }
 span.item-increase a, span.item-decrease a, span.item-delete a {
-  padding: 10px 15px !important;
+  padding: 10px 8px !important;
 }
 /* Mobile Navigation ends here*/
 /* checkoutForm starts here*/

@@ -679,6 +679,11 @@ section.banner{
     clear: both;
   }
 }
+@media (max-width: 576px){
+  .shopping-cart-container {
+    width: 100% !important;
+  }
+}
 @media (max-width: 992px){
   nav.main-nav{
     background: #fff;
